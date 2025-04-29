@@ -1,6 +1,7 @@
 <?php 
 require_once 'database/db_connect.php';
 
+/* Counts the querys per task */
 $stmt = $pdo->query("SELECT COUNT(*) FROM tasks WHERE completed = 0");
 $pendingTasks = $stmt->fetchColumn();
 
@@ -30,7 +31,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="todo.php">To-Do List</a>
+                        <a class="nav-link" href="todolist.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="habits.php">Habit Tracker</a>
@@ -48,7 +49,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
 
     <div class="container">
         <div class="welcome-section">
-            <h1>CRUD Assignment</h1>
+            <h1>CRUD ASSIGNMENT</h1>
             <p>Please select among the given <strong>CRUD</strong> tasks:</p>
         </div>
 
@@ -56,7 +57,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
             <div class="feature-card">
                 <h3>To-Do List</h3>
                 <p>Keep track of your tasks and deadlines. Currently <?php echo $pendingTasks; ?> pending tasks.</p>
-                <a href="todo.php" class="btn">Manage Tasks</a>
+                <a href="todolist.php" class="btn">Manage Tasks</a>
             </div>
 
             <div class="feature-card">
