@@ -1,18 +1,32 @@
+<?php 
+require_once 'database/db_connect.php';
+
+$stmt = $pdo->query("SELECT COUNT(*) FROM tasks WHERE completed = 0");
+$pendingTasks = $stmt->fetchColumn();
+
+$stmt = $pdo->query("SELECT COUNT(*) FROM habits WHERE completed = 0");
+$pendingHabits = $stmt->fetchColumn();
+
+$stmt = $pdo->query("SELECT COUNT(*) FROM books WHERE completed = 0");
+$pendingBooks = $stmt->fetchColumn();
+
+$stmt = $pdo->query("SELECT SUM(amount) FROM expenses");
+$totalExpenses = $stmt->fetchColumn() ?: 0;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Web Applications</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/index-style.css">
 </head>
 <body>
 <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.php">CRUD App</a>
-            <button class="navbar-toggle" type="button">
-                <span class="navbar-toggle-icon"></span>
-            </button>
+            <a class="navbar-brand" href="index.php">CRUD Web-Applications</a>
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -34,8 +48,8 @@
 
     <div class="container">
         <div class="welcome-section">
-            <h1>Welcome to Your Personal Dashboard</h1>
-            <p>Manage your tasks, track your habits, keep up with your reading, and monitor your budget all in one place.</p>
+            <h1>CRUD Assignment</h1>
+            <p>Please select among the given <strong>CRUD</strong> tasks:</p>
         </div>
 
         <div class="features-grid">

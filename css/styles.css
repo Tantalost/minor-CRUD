@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+.nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Page title */
+.page-title {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Common form styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Common button styles */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Task list */
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-item {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.task-item p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-menu {
+        display: none;
+    }
+    
+    .navbar-menu.active {
+        display: block;
+    }
+}
+
+.card {
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.task-item, .habit-item, .book-item, .expense-item {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+} 
