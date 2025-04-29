@@ -34,7 +34,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
                         <a class="nav-link" href="todolist.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="habits.php">Habit Tracker</a>
+                        <a class="nav-link" href="habittracker.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reading.php">Reading List</a>
@@ -63,7 +63,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
             <div class="feature-card">
                 <h3>Habit Tracker</h3>
                 <p>Build and maintain good habits. <br>Currently <span style="color: red;"><?php echo $pendingHabits; ?></span> pending tasks.</p>
-                <a href="habits.php" class="btn">Track Habits</a>
+                <a href="habittracker.php" class="btn">Track Habits</a>
             </div>
 
             <div class="feature-card">
