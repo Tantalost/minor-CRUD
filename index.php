@@ -4,78 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Web Applications</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="/css/index-style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">CRUD App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="index.php">CRUD App</a>
+            <button class="navbar-toggle" type="button">
+                <span class="navbar-toggle-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/T1/todolist.html">To-Do List</a>
+                        <a class="nav-link" href="todo.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="habits.html">Habit Tracker</a>
+                        <a class="nav-link" href="habits.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reading.html">Reading List</a>
+                        <a class="nav-link" href="reading.php">Reading List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="budget.html">Budget Tracker</a>
+                        <a class="nav-link" href="budget.php">Budget Tracker</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1>Assignment CRUD</h1>
-        <p>Choose among the following tasks:</p>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">To-Do List</h5>
-                        <p class="card-text"><strong>Objective:</strong> Develop an interactive to‑do list manager web application that enables users to efficiently create, manage, and track their tasks.</p>
-                        <a href="/T1/todolist.html" class="btn btn-primary">Go to To-Do List</a>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to Your Personal Dashboard</h1>
+            <p>Manage your tasks, track your habits, keep up with your reading, and monitor your budget all in one place.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>To-Do List</h3>
+                <p>Keep track of your tasks and deadlines. Currently <?php echo $pendingTasks; ?> pending tasks.</p>
+                <a href="todo.php" class="btn">Manage Tasks</a>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Habit Tracker</h5>
-                        <p class="card-text"><strong>Objective:</strong> Design and implement a web-based habit tracker that allows users to create, monitor, and sustain daily or weekly habits.</p>
-                        <a href="habits.html" class="btn btn-primary">Go to Habit Tracker</a>
-                    </div>
-                </div>
+
+            <div class="feature-card">
+                <h3>Habit Tracker</h3>
+                <p>Build and maintain good habits. Currently <?php echo $pendingHabits; ?> active habits.</p>
+                <a href="habits.php" class="btn">Track Habits</a>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Reading List</h5>
-                        <p class="card-text"><strong>Objective:</strong> Develop an interactive Reading List.</p>
-                        <a href="reading.html" class="btn btn-primary">Go to Reading List</a>
-                    </div>
-                </div>
+
+            <div class="feature-card">
+                <h3>Reading List</h3>
+                <p>Manage your reading goals. Currently <?php echo $pendingBooks; ?> books in progress.</p>
+                <a href="reading.php" class="btn">View Reading List</a>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Budget Tracker</h5>
-                        <p class="card-text"><strong>Objective:</strong> Create a web-based budget tracker that allows users to log expenses, categorize spending, and monitor their total balance.</p>
-                        <a href="budget.html" class="btn btn-primary">Go to Budget Tracker</a>
-                    </div>
-                </div>
+
+            <div class="feature-card">
+                <h3>Budget Tracker</h3>
+                <p>Monitor your expenses. Total expenses: $<?php echo number_format($totalExpenses, 2); ?></p>
+                <a href="budget.php" class="btn">Track Budget</a>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
