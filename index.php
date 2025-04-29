@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="todo.html">To-Do List</a>
+                        <a class="nav-link" href="/T1/todolist.html">To-Do List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="habits.html">Habit Tracker</a>
@@ -34,15 +34,15 @@
     </nav>
 
     <div class="container mt-4">
-        <h1>Welcome to CRUD Web Application</h1>
-        <p>Choose a task from the navigation bar above to get started:</p>
+        <h1>Assignment CRUD</h1>
+        <p>Choose among the following tasks:</p>
         <div class="row mt-4">
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">To-Do List</h5>
-                        <p class="card-text">Manage your daily tasks and track their completion status.</p>
-                        <a href="todo.html" class="btn btn-primary">Go to To-Do List</a>
+                        <p class="card-text"><strong>Objective:</strong> Develop an interactive to‑do list manager web application that enables users to efficiently create, manage, and track their tasks.</p>
+                        <a href="/T1/todolist.html" class="btn btn-primary">Go to To-Do List</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Habit Tracker</h5>
-                        <p class="card-text">Track your daily and weekly habits.</p>
+                        <p class="card-text"><strong>Objective:</strong> Design and implement a web-based habit tracker that allows users to create, monitor, and sustain daily or weekly habits.</p>
                         <a href="habits.html" class="btn btn-primary">Go to Habit Tracker</a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Reading List</h5>
-                        <p class="card-text">Keep track of your reading progress.</p>
+                        <p class="card-text"><strong>Objective:</strong> Develop an interactive Reading List.</p>
                         <a href="reading.html" class="btn btn-primary">Go to Reading List</a>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Budget Tracker</h5>
-                        <p class="card-text">Monitor your expenses and budget.</p>
+                        <p class="card-text"><strong>Objective:</strong> Create a web-based budget tracker that allows users to log expenses, categorize spending, and monitor their total balance.</p>
                         <a href="budget.html" class="btn btn-primary">Go to Budget Tracker</a>
                     </div>
                 </div>
