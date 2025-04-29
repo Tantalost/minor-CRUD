@@ -56,25 +56,25 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
         <div class="features-grid">
             <div class="feature-card">
                 <h3>To-Do List</h3>
-                <p>Keep track of your tasks and deadlines. Currently <?php echo $pendingTasks; ?> pending tasks.</p>
+                <p>Keep track of your tasks and deadlines. <br>Currently <span style="color: red;"><?php echo $pendingTasks; ?></span> pending tasks.</p>
                 <a href="todolist.php" class="btn">Manage Tasks</a>
             </div>
 
             <div class="feature-card">
                 <h3>Habit Tracker</h3>
-                <p>Build and maintain good habits. Currently <?php echo $pendingHabits; ?> active habits.</p>
+                <p>Build and maintain good habits. <br>Currently <span style="color: red;"><?php echo $pendingHabits; ?></span> pending tasks.</p>
                 <a href="habits.php" class="btn">Track Habits</a>
             </div>
 
             <div class="feature-card">
                 <h3>Reading List</h3>
-                <p>Manage your reading goals. Currently <?php echo $pendingBooks; ?> books in progress.</p>
+                <p>Manage your reading goals. <br>Currently <span style="color: red;"><?php echo $pendingBooks; ?></span> pending tasks.</p>
                 <a href="reading.php" class="btn">View Reading List</a>
             </div>
 
             <div class="feature-card">
                 <h3>Budget Tracker</h3>
-                <p>Monitor your expenses. Total expenses: $<?php echo number_format($totalExpenses, 2); ?></p>
+                <p>Monitor your expenses. <span style="color: red;">Total expenses: $<?php echo number_format($totalExpenses, 2); ?></span></p>
                 <a href="budget.php" class="btn">Track Budget</a>
             </div>
         </div>

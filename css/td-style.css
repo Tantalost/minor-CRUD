@@ -1,0 +1,78 @@
+/* Todo page specific styles */
+.task-list {
+    margin-top: 2rem;
+}
+
+.task-item {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.task-item p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.task-item .btn-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Todo form specific styles */
+.todo-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.todo-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.todo-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.todo-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Status badge styles */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-completed {
+    background-color: #28a745;
+    color: #fff;
+} 
