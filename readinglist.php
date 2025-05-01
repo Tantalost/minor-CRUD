@@ -13,14 +13,15 @@ if (!isset($_SESSION['books'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
-    $book = [
-        'name' => $_POST['book_name'],
-        'author' => $_POST['author_name'],
-        'type' => $_POST['type'],
-        'target_date' => $_POST['target_date'],
-        'done' => false,
-    ];
-    $_SESSION['books'][] = $book;
+        $name = $_POST['book_name'];
+        $author = $_POST['author_name'];
+        $genre = $_POST['genre'];
+        $start_date = $_POST['start_date'];
+        $done = 0;
+
+    $stmt = $pdo->prepare("INSERT INTO books (name, author_name, genre, start_date,completed) VALUES (?,?,?,?,?)");
+    $stmt->execute([$name, $author, $genre, $start_date, $done]);
+    
     header("Location: index.php");
     exit;
 }
