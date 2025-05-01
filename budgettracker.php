@@ -1,5 +1,52 @@
 <?php
+require_once 'db_connect.php';
+
+// Handle form submissions
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['action'])) {
+        switch ($_POST['action']) {
+            case 'add':
+                $stmt = $pdo->prepare("INSERT INTO expenses (description, amount, category, date) VALUES (?, ?, ?, ?)");
+                $stmt->execute([$_POST['description'], $_POST['amount'], $_POST['category'], $_POST['date']]);
+                break;
+            
+            case 'edit':
+                $stmt = $pdo->prepare("UPDATE expenses SET description = ?, amount = ?, category = ?, date = ? WHERE id = ?");
+                $stmt->execute([$_POST['description'], $_POST['amount'], $_POST['category'], $_POST['date'], $_POST['id']]);
+                break;
+            
+            case 'delete':
+                $stmt = $pdo->prepare("DELETE FROM expenses WHERE id = ?");
+                $stmt->execute([$_POST['id']]);
+                break;
+        }
+        
+        // Redirect to prevent form resubmission
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    }
+}
+
+// Fetch all expenses
+$stmt = $pdo->query("SELECT * FROM expenses ORDER BY date DESC");
+$expenses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Calculate summary
+$totalExpenses = 0;
+$categoryTotals = [
+    'food' => 0,
+    'transportation' => 0,
+    'entertainment' => 0,
+    'utilities' => 0,
+    'other' => 0
+];
+
+foreach ($expenses as $expense) {
+    $totalExpenses += $expense['amount'];
+    $categoryTotals[$expense['category']] += $expense['amount'];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
