@@ -79,12 +79,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
         </form>
 
         <ul class="book-list">
-            <?php foreach ($_SESSION['books'] as $index => $book): ?>
-                <li class="<?= $book['done'] ? 'done' : '' ?>">
-                    <strong><?= htmlspecialchars($book['name']) ?></strong> by <?= htmlspecialchars($book['author']) ?>
-                    (<?= $book['genre'] ?>) - Start by <?= $book['start_date'] ?>
+            <?php  
+            $stmt = $pdo->query("SELECT * FROM books");
+            $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($books as $index => $books):
+            ?>
+                <li class="<?= $books['completed'] ? 'done' : '' ?>">
+                    <strong><?= htmlspecialchars($books['name']) ?></strong> by <?= htmlspecialchars($books['author']) ?>
+                    (<?= $books['genre'] ?>) - Start by <?= $books['start_date'] ?>
                     <div class="actions">
-                        <?php if (!$book['done']): ?>
+                        <?php if (!$books['completed']): ?>
                             <a href="?done=<?= $index ?>">Mark as Done</a>
                         <?php endif; ?>
                         <a href="edit.php?index=<?= $index ?>">Edit</a>
