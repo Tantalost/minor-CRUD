@@ -4,9 +4,7 @@ session_start();
   Rafsan Unaid
   Justin james Alviar
 */
-
-$pdo = new PDO("mysql:host=localhost;dbname=crud", "root", "");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once 'database/db_connect.php';
 
 if (!isset($_SESSION['books'])) {
     $_SESSION['books'] = [];
@@ -19,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
         $start_date = $_POST['start_date'];
         $done = 0;
 
-    $stmt = $pdo->prepare("INSERT INTO books (name, author_name, genre, start_date,completed) VALUES (?,?,?,?,?)");
+    $stmt = $pdo->prepare("INSERT INTO books (name, author, genre, start_date,completed) VALUES (?,?,?,?,?)");
     $stmt->execute([$name, $author, $genre, $start_date, $done]);
-    
+
     header("Location: index.php");
     exit;
 }
@@ -43,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
     $_SESSION['books'][$index] = [
         'name' => $_POST['book_name'],
         'author' => $_POST['author_name'],
-        'type' => $_POST['type'],
-        'target_date' => $_POST['target_date'],
+        'genre' => $_POST['genre'],
+        'start_date' => $_POST['start_date'],
         'done' => false,
     ];
     header("Location: index.php");
@@ -70,12 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
             <input type="text" name="author_name" placeholder="Author Name" required>
             <div class="radio-group">
                 <label>Type of Book:</label>
-                <label><br><input type="radio" name="type" value="Fiction" required> Fiction</label>
-                <label><br><input type="radio" name="type" value="Non-Fiction" required> Non-Fiction</label>
+                <label><br><input type="radio" name="genre" value="Fiction" required> Fiction</label>
+                <label><br><input type="radio" name="genre" value="Non-Fiction" required> Non-Fiction</label>
             </div>
             <label>Start to Read Date: </label>
             <br>
-            <input type="date" name="target_date" required>
+            <input type="date" name="start_date" required>
             <br>
             <button type="submit" name="add">Add Book</button>
         </form>
@@ -84,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
             <?php foreach ($_SESSION['books'] as $index => $book): ?>
                 <li class="<?= $book['done'] ? 'done' : '' ?>">
                     <strong><?= htmlspecialchars($book['name']) ?></strong> by <?= htmlspecialchars($book['author']) ?>
-                    (<?= $book['type'] ?>) - Start by <?= $book['target_date'] ?>
+                    (<?= $book['genre'] ?>) - Start by <?= $book['start_date'] ?>
                     <div class="actions">
                         <?php if (!$book['done']): ?>
                             <a href="?done=<?= $index ?>">Mark as Done</a>

@@ -14,7 +14,7 @@ $stmt = $pdo->query("SELECT COUNT(*) FROM habits WHERE completed = 0");
 $pendingHabits = $stmt->fetchColumn();
 
 $stmt = $pdo->query("SELECT COUNT(*) FROM books WHERE completed = 0");
-$pendingBooks = $stmt->fetchColumn();
+$books = $stmt->fetchColumn();
 
 $stmt = $pdo->query("SELECT SUM(amount) FROM expenses");
 $totalExpenses = $stmt->fetchColumn() ?: 0;
@@ -73,7 +73,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
 
             <div class="feature-card">
                 <h3>Reading List</h3>
-                <p>Manage your reading goals. <br>Currently <span style="color: red;"><?php echo $pendingBooks; ?></span> pending tasks.</p>
+                <p>Manage your reading goals. <br>Currently <span style="color: red;"><?php echo $books; ?></span> pending tasks.</p>
                 <a href="readinglist.php" class="btn">View Reading List</a>
             </div>
 

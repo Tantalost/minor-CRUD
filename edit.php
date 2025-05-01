@@ -24,10 +24,10 @@ $book = $_SESSION['books'][$index];
         <input type="text" name="book_name" value="<?= htmlspecialchars($book['name']) ?>" required>
         <input type="text" name="author_name" value="<?= htmlspecialchars($book['author']) ?>" required>
         <div class="radio-group">
-            <label><input type="radio" name="type" value="Fiction" <?= $book['type'] == 'Fiction' ? 'checked' : '' ?>> Fiction</label>
-            <label><input type="radio" name="type" value="Non-Fiction" <?= $book['type'] == 'Non-Fiction' ? 'checked' : '' ?>> Non-Fiction</label>
+            <label><input type="radio" name="genre" value="Fiction" <?= $book['genre'] == 'Fiction' ? 'checked' : '' ?>> Fiction</label>
+            <label><input type="radio" name="genre" value="Non-Fiction" <?= $book['genre'] == 'Non-Fiction' ? 'checked' : '' ?>> Non-Fiction</label>
         </div>
-        <input type="date" name="target_date" value="<?= $book['target_date'] ?>" required>
+        <input type="date" name="start_date" value="<?= $book['start_date'] ?>" required>
         <button type="submit" name="edit">Save Changes</button>
     </form>
 </div>
