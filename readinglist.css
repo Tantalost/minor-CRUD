@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #333;
+    text-shadow: 0 1px 2px #d0c2c2;
+    margin: 0;
+    padding: 75px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list li {
+    padding: 15px;
+    margin: 10px 0;
+    background: #e9e9e9;
+    border-radius: 5px;
+}
+
+.book-list li.done {
+    text-decoration: line-through;
+    background: #d4edda;
+}
+
+.actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+}

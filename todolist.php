@@ -53,13 +53,13 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="todo.php">To-Do List</a>
+                        <a class="nav-link active" href="todolist.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="habits.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reading.php">Reading List</a>
+                        <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="budget.php">Budget Tracker</a>
