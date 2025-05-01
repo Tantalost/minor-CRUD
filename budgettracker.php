@@ -52,7 +52,7 @@ foreach ($expenses as $expense) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Tracker - CRUD App</title>
+    <title>Task 4</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="css/budget.css">
 </head>
@@ -60,9 +60,6 @@ foreach ($expenses as $expense) {
     <nav class="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.php">CRUD App</a>
-            <button class="navbar-toggle" type="button">
-                <span class="navbar-toggle-icon"></span>
-            </button>
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -84,22 +81,6 @@ foreach ($expenses as $expense) {
 
     <div class="container">
         <h1 class="page-title">Budget Tracker</h1>
-        
-        <div class="summary-section">
-            <h3>Expense Summary</h3>
-            <div class="summary-grid">
-                <div class="summary-item">
-                    <h4>Total Expenses</h4>
-                    <div class="amount expense">$<?php echo number_format($totalExpenses, 2); ?></div>
-                </div>
-                <?php foreach ($categoryTotals as $category => $total): ?>
-                    <div class="summary-item">
-                        <h4><?php echo ucfirst($category); ?></h4>
-                        <div class="amount expense">$<?php echo number_format($total, 2); ?></div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
         
         <div class="budget-form">
             <h3>Add New Expense</h3>
@@ -129,6 +110,23 @@ foreach ($expenses as $expense) {
                 </div>
                 <button type="submit" class="btn btn-primary">Add Expense</button>
             </form>
+        </div>
+        <br>
+
+        <div class="summary-section">
+            <h3>Expense Summary</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h4>Total Expenses</h4>
+                    <div class="amount expense">$<?php echo number_format($totalExpenses, 2); ?></div>
+                </div>
+                <?php foreach ($categoryTotals as $category => $total): ?>
+                    <div class="summary-item">
+                        <h4><?php echo ucfirst($category); ?></h4>
+                        <div class="amount expense">$<?php echo number_format($total, 2); ?></div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
 
         <div class="expense-list">
