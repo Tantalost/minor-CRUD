@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
 }
 
 if (isset($_GET['done'])) {
-    $_SESSION['books'][$_GET['done']]['done'] = true;
+    $_SESSION['books'][$_GET['done']]['completed'] = 1;
     header("Location: index.php");
     exit;
 }
