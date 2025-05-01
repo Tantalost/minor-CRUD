@@ -59,7 +59,7 @@ foreach ($expenses as $expense) {
 <body>
     <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.php">CRUD App</a>
+            <a class="navbar-brand" href="index.php">CRUD Web-Applications</a>
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -72,7 +72,7 @@ foreach ($expenses as $expense) {
                         <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="budget.php">Budget Tracker</a>
+                        <a class="nav-link active" href="budgettracker.php">Budget Tracker</a>
                     </li>
                 </ul>
             </div>

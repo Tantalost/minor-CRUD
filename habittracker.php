@@ -49,7 +49,7 @@ $habits = getData('habits');
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">CRUD App</a>
+            <a class="navbar-brand" href="index.php">CRUD Web-Applications</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,7 +65,7 @@ $habits = getData('habits');
                         <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="budget.php">Budget Tracker</a>
+                        <a class="nav-link" href="budgettracker.php">Budget Tracker</a>
                     </li>
                 </ul>
             </div>

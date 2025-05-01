@@ -53,7 +53,7 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.php">CRUD App</a>
+            <a class="navbar-brand" href="index.php">CRUD Web-Applications</a>
             <div class="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
