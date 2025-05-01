@@ -45,7 +45,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
                         <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="budget.php">Budget Tracker</a>
+                        <a class="nav-link" href="budgettracker.php">Budget Tracker</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +80,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
             <div class="feature-card">
                 <h3>Budget Tracker</h3>
                 <p>Monitor your expenses. <span style="color: red;">Total expenses: $<?php echo number_format($totalExpenses, 2); ?></span></p>
-                <a href="budget.php" class="btn">Track Budget</a>
+                <a href="budgettracker.php" class="btn">Track Budget</a>
             </div>
         </div>
     </div>

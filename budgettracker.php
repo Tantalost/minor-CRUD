@@ -1,5 +1,5 @@
 <?php
-require_once 'db_connect.php';
+require_once 'database/db_connect.php';
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -53,7 +53,7 @@ foreach ($expenses as $expense) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Tracker - CRUD App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="css/budget.css">
 </head>
 <body>
