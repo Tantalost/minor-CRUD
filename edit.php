@@ -1,4 +1,8 @@
 <?php
+/*John Loyd Climaco
+  Rafsan Unaid
+  Justin james Alviar
+*/
 session_start();
 
 $index = $_GET['index'];

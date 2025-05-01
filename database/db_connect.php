@@ -1,4 +1,8 @@
 <?php
+/*John Loyd Climaco
+  Rafsan Unaid
+  Justin james Alviar
+*/
 $host = 'localhost';
 $dbname = 'crud';
 $username = 'root';

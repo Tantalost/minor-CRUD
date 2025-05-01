@@ -1,4 +1,8 @@
 <?php
+/*John Loyd Climaco
+  Rafsan Unaid
+  Justin james Alviar
+*/
 require_once 'database/db_connect.php';
 
 // Handle form submissions

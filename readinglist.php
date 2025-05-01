@@ -4,6 +4,10 @@ session_start();
   Rafsan Unaid
   Justin james Alviar
 */
+
+$pdo = new PDO("mysql:host=localhost;dbname=crud", "root", "");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 if (!isset($_SESSION['books'])) {
     $_SESSION['books'] = [];
 }
@@ -34,7 +38,7 @@ if (isset($_GET['delete'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
-    $index = $_POST['index'];
+    $index = $_POST['readinglist'];
     $_SESSION['books'][$index] = [
         'name' => $_POST['book_name'],
         'author' => $_POST['author_name'],
