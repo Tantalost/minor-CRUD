@@ -60,7 +60,7 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <a class="nav-link active" href="todolist.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="habits.php">Habit Tracker</a>
+                        <a class="nav-link" href="habittracker.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="readinglist.php">Reading List</a>

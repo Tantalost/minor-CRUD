@@ -62,7 +62,7 @@ $habits = getData('habits');
                         <a class="nav-link active" href="habits.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reading.php">Reading List</a>
+                        <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="budget.php">Budget Tracker</a>

@@ -39,7 +39,7 @@ $totalExpenses = $stmt->fetchColumn() ?: 0;
                         <a class="nav-link" href="todolist.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="indextask3.php">Habit Tracker</a>
+                        <a class="nav-link" href="habittracker.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="readinglist.php">Reading List</a>

@@ -66,10 +66,10 @@ foreach ($expenses as $expense) {
                         <a class="nav-link" href="todo.php">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="habits.php">Habit Tracker</a>
+                        <a class="nav-link" href="habittracker.php">Habit Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reading.php">Reading List</a>
+                        <a class="nav-link" href="readinglist.php">Reading List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="budget.php">Budget Tracker</a>
